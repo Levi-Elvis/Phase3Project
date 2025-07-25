@@ -1,17 +1,17 @@
 
-# 💰 Financial Goal Prediction Using Behavioral and Investment Signals
+#  Financial Goal Prediction Using Behavioral and Investment Signals
 
 **Can your financial behavior predict your success? This project builds a model to find out.**
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This repository contains a full machine learning pipeline that predicts an individual’s likelihood of attaining their financial goals (`GOAL_scaled`). We bridge classical financial data with behavioral economics, aiming to improve predictive insights in personal finance using demographic, behavioral, and investment indicators.
 
 ---
 
-## 🎯 Project Objectives
+##  Project Objectives
 
 - Model the relationship between **behavioral traits**, **investment habits**, and **demographics** in predicting financial outcomes.
 - Test whether behavioral indicators (like risk tolerance and planning behavior) significantly explain financial goal achievement.
@@ -19,7 +19,7 @@ This repository contains a full machine learning pipeline that predicts an indiv
 
 ---
 
-## 🧠 Why This Matters
+##  Why This Matters
 
 Traditional financial models rarely account for **human behavior**. This project explores the integration of:
 - **Behavioral signals** (e.g., `RA_total`, `PBC_total`, `BI_total`)
@@ -30,7 +30,7 @@ to uncover **behavior-driven prediction pipelines** that could inform future fin
 
 ---
 
-## 📊 Dataset Summary
+##  Dataset Summary
 
 **Source**: Processed proprietary dataset  
 **File**: `CODED_DATA_cleaned_transformed.csv`  
@@ -45,13 +45,13 @@ to uncover **behavior-driven prediction pipelines** that could inform future fin
 | Encoded/Scaled     | `*_scaled`, `*_encoded`                                      |
 | Target             | `GOAL_scaled`                                                |
 
-> 🔎 All features are numeric and machine-learning-ready.
+> All features are numeric and machine-learning-ready.
 
 ---
 
-## 📈 Modeling Strategy
+##  Modeling Strategy
 
-### 💡 Phase 1: Regression (current)
+###  Phase 1: Regression (current)
 
 ```python
 from sklearn.ensemble import RandomForestRegressor
@@ -59,7 +59,7 @@ from sklearn.metrics import r2_score, mean_squared_error
 ```
 Trained on `GOAL_scaled` as a continuous target. Early results suggest moderate predictive strength.
 
-### 🧪 Phase 2: Classification (recommended)
+###  Phase 2: Classification (recommended)
 Convert `GOAL_scaled` into binary or categorical buckets:
 - **Binary**: Above or below population mean
 - **Tertiles**: Low / Medium / High financial attainment
@@ -68,7 +68,7 @@ This increases interpretability for business decisions and public-facing tools.
 
 ---
 
-## 🧰 ML Pipeline Summary
+##  ML Pipeline Summary
 
 ```python
 # Load and split
@@ -95,14 +95,14 @@ print("R²:", r2_score(y_test, model.predict(X_test)))
 
 | Metric       | Status      | Notes |
 |--------------|-------------|-------|
-| R² Score     | ✔️ Reported | Needs baseline for context |
-| RMSE         | ✔️ Reported | Add MAE + visualization |
-| Feature Importances | ❌ Missing | Required for trust and deployment |
-| Bias Testing | ❌ Missing | Consider subgroup fairness |
+| R² Score     |  Reported | Needs baseline for context |
+| RMSE         |  Reported | Add MAE + visualization |
+| Feature Importances |  Missing | Required for trust and deployment |
+| Bias Testing |  Missing | Consider subgroup fairness |
 
 ---
 
-## 🧠 Explainability & Fairness
+##  Explainability & Fairness
 
 | Tool  | Use Case              | Status |
 |-------|------------------------|--------|
@@ -110,33 +110,33 @@ print("R²:", r2_score(y_test, model.predict(X_test)))
 | LIME  | Local interpretability       | 🔄 Planned |
 | Bias Audit | Gender, age fairness check | 🔄 Needed |
 
-> ⚠️ Risk: Models trained on demographic behavior data may reflect or amplify societal biases unless audited properly.
+>  Risk: Models trained on demographic behavior data may reflect or amplify societal biases unless audited properly.
 
 ---
 
-## 🧭 Ethical Checklist
+##  Ethical Checklist
 
 | Concern                         | Covered? | Comment |
 |----------------------------------|----------|---------|
-| Anonymized data                  | ✅       | No direct identifiers present |
-| Informed consent                 | ❓       | Unclear from metadata |
-| Bias and fairness mitigation     | ❌       | Needs implementation |
-| Explainability for end-users    | 🔄       | SHAP planned |
-| Misuse prevention disclaimer     | ❌       | Should be added before deployment |
+| Anonymized data                  |        | No direct identifiers present |
+| Informed consent                 |        | Unclear from metadata |
+| Bias and fairness mitigation     |        | Needs implementation |
+| Explainability for end-users    |        | SHAP planned |
+| Misuse prevention disclaimer     |       | Should be added before deployment |
 
 ---
 
-## 🔮 Future Roadmap
+##  Future Roadmap
 
-1. 🔧 Add classification pipeline for clearer output
-2. 🔍 Introduce SHAP & fairness dashboard
-3. 🚀 Deploy model using Streamlit + API
-4. 🧾 Publish model card with ethical analysis
-5. 🧪 Compare RandomForest vs XGBoost vs Lasso
+1.  Add classification pipeline for clearer output
+2.  Introduce SHAP & fairness dashboard
+3.  Deploy model using Streamlit + API
+4.  Publish model card with ethical analysis
+5.  Compare RandomForest vs XGBoost vs Lasso
 
 ---
 
-## 📁 File Structure
+##  File Structure
 
 ```
 financial-goal-prediction/
@@ -155,7 +155,7 @@ financial-goal-prediction/
 
 ---
 
-## 👤 Author
+##  Author
 
 **Elvis Oduor Ong'injo**  
 Finance Specialist | Data Analyst | CRISP-DM Enthusiast  
